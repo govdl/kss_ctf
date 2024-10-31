@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wargame</title>
+    <link rel = "stylesheet" href ="main.css">
+</head>
+<body>
+    <header>
+        <div class="login-container">
+            <form id="loginForm" action="../백/login_action.php">
+                <label for="username"><b>ID</b></label>
+                <input type="text" id="id" name="id" required>
+
+                <label for="password">&nbsp;&nbsp;<b>PW</b></label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">로그인</button>
+                <button type="button" onclick="location.href='join.html'">회원가입</button>
+            </form>
+            <div id="userInfo" style="display: none;">
+                <h3>Username</h3>
+                <p id="userNameDisplay"></p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="web.html"><b>Web</b></a></li>
+                <li><a href="reversing.html"><b>Reversing</b></a></li>
+                <li><a href="pwnable.html"><b>Pwnable</b></a></li>
+                <li><a href="forensic.html"><b>Forensic</b></a></li>
+                <li><a href="misc.html"><b>Misc</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="chart-container">
+            <h2>Lanking</h2>
+            <div class="bar" style="height: 50px;">팀 A (120점)</div>
+            <div class="bar" style="height: 50px;">팀 B (150점)</div>
+            <div class="bar" style="height: 50px;">팀 C (100점)</div>
+            <div class="bar" style="height: 50px;">팀 D (180점)</div>
+        </div>
+    </main>
+    <script src="../백/main.js"></script>
+</body>
+</html>

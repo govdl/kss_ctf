@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mypage.css">
+    <title>My Page</title>
+    <script src="../백/mypage.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>마이페이지</h1>
+        <h2>회원 정보</h2>
+        <p><span id="userName">Name</span></p>
+        <p>이메일: <span id="userEmail">email@email.com</span></p>
+
+        <h2>비밀번호 변경</h2>
+        <form id="changePassword">
+            <input type="password" name="newPassword" placeholder="새 비밀번호" required>
+            <button type="submit">비밀번호 변경</button>
+        </form>
+        <div id="passwordChangeMessage"></div>
+
+        <h2>게시판 글쓰기</h2>  <!-- 없어도 되지 않을까 -->
+        <form id="writePostForm">
+            <input type="text" name="title" placeholder="제목" required>
+            <textarea name="content" placeholder="내용" required></textarea>
+            <button type="submit">글쓰기</button>
+        </form>
+        <div id="postMessage"></div>
+
+        <h2>게시판 글 목록</h2>  <!-- 없어도 되지 않을까 -->
+        <ul id="postList">
+    </div>
+</body>
+</html>

@@ -20,7 +20,7 @@ $user_password = $_POST['password'];
 $hashed_password = password_hash($user_password, PASSWORD_DEFAULT); //비밀번호 해시로 저장
 
 // 데이터베이스에 사용자 정보 삽입
-$sql = "INSERT INTO users (id, email, password) VALUES ('$user_id', '$email', '$hashed_password')";
+$sql = "INSERT INTO login_table (id, email, password) VALUES ('$user_id', '$email', '$hashed_password')";
 
 if ($conn->query($sql) === TRUE) {
     echo "<script>alert('회원가입 성공!'); window.location.href='../templates/main.html';</script>"; //리디렉션

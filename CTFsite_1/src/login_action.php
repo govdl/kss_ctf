@@ -18,8 +18,9 @@ if (!$conn) {
 $id = $_POST['id'];
 $password = $_POST['password'];
 
+//sql injection 방지
 // SQL 인젝션 방지
-$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt = $conn->prepare("SELECT * FROM login_table WHERE id = ?");
 $stmt->bind_param("s", $id);
 $stmt->execute();
 $result = $stmt->get_result();

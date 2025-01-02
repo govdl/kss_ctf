@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-top: 5px;
+    display: flex;
+    gap: 60px;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: scale(1.2);
+}
+
+.rankings {
+    padding: 20px;
+}
+
+.rankings h2 {
+    margin-top: 0;
+}
+
+.rankings ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rankings li {
+    margin: 5px 0;
+}
+
+input[type="text"], input[type="password"]{
+    padding: 5px;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    background-color: rgb(105, 105, 234);
+    color: white;
+    padding: 7px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+main {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chart-container {
+    width: 400px;
+    text-align: center;
+}
+
+.bar {
+    background-color: #553870;
+    color: white;
+    text-align: right;
+    padding: 5px 10px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.bar:hover {
+    background-color: #0056b3;
+}

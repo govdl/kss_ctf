@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wargame</title>
+    <link rel="stylesheet" href="../static/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div id="login-container">
+        <!-- 로그인 섹션 -->
+        <div id="login-section">
+          <form id="loginForm" action="../src/login_action.php" method="post">
+            <label for="id"><b>ID</b></label>
+            <input type="text" id="id" name="id" required />
+
+            <label for="password"><b>PW</b></label>
+            <input type="password" id="password" name="password" required />
+
+            <button type="submit">로그인</button>
+            <button type="button" onclick="location.href='join.html'">
+              회원가입
+            </button>
+          </form>
+        </div>
+
+        <!-- 로그인 후 마이페이지 버튼을 위한 섹션 -->
+        <div id="mypage-section" style="display: none">
+          <h3>Welcome!</h3>
+          <p id="userIdDisplay"></p>
+          <!-- 여기서 id 표시 -->
+          <button onclick="location.href='mypage.html'">
+            마이페이지로 이동
+          </button>
+        </div>
+      </div>
+
+      <script>
+        // URL에서 userId 파라미터 값을 가져오는 함수
+        function getQueryParam(param) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(param);
+        }
+
+        window.onload = function () {
+          const userId = getQueryParam("userId"); // URL에서 userId 가져옴
+
+          if (userId) {
+            // 로그인 상태일 경우 로그인 폼을 숨기고 마이페이지 버튼을 표시
+            document.getElementById("login-section").style.display = "none";
+            document.getElementById("mypage-section").style.display = "block";
+            document.getElementById("userIdDisplay").innerText =
+              "사용자 ID: " + userId;
+          } else {
+            console.log("로그인 상태가 아닙니다.");
+          }
+        };
+      </script>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="web.html"><b>Web</b></a>
+          </li>
+          <li>
+            <a href="reversing.html"><b>Reversing</b></a>
+          </li>
+          <li>
+            <a href="pwnable.html"><b>Pwnable</b></a>
+          </li>
+          <li>
+            <a href="forensic.html"><b>Forensic</b></a>
+          </li>
+          <li>
+            <a href="misc.html"><b>Misc</b></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="chart-container">
+        <h2>Lanking</h2>
+        <div class="bar" style="height: 50px">팀 A (120점)</div>
+        <div class="bar" style="height: 50px">팀 B (150점)</div>
+        <div class="bar" style="height: 50px">팀 C (100점)</div>
+        <div class="bar" style="height: 50px">팀 D (180점)</div>
+      </div>
+    </main>
+  </body>
+</html>
